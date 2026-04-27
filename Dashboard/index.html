@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flora & Leaf Merchant Dashboard - Manage your plant inventory, sales, and nursery health metrics.">
+    <title>Merchant Dashboard | Flora & Leaf Plant Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        /* Custom focus ring for better accessibility */
+        *:focus-visible {
+            outline: 3px solid #10b981;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900 font-sans antialiased">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-emerald-600 focus:text-white">Skip to main content</a>
+
+    <div class="min-h-screen flex flex-col lg:flex-row">
+        
+        <nav class="w-full lg:w-72 bg-emerald-900 text-emerald-50 p-6 flex-shrink-0" aria-label="Dashboard Navigation">
+            <div class="flex items-center mb-10">
+                <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center mr-3" aria-hidden="true">
+                    <span class="text-white font-bold">🌿</span>
+                </div>
+                <span class="text-2xl font-serif font-bold tracking-wide">Flora & Leaf</span>
+            </div>
+            
+            <ul class="space-y-2">
+                <li><a href="#" class="flex items-center p-3 rounded-lg bg-emerald-800 font-medium" aria-current="page">Overview</a></li>
+                <li><a href="#" class="flex items-center p-3 rounded-lg hover:bg-emerald-800 transition">Inventory Management</a></li>
+                <li><a href="#" class="flex items-center p-3 rounded-lg hover:bg-emerald-800 transition">Customer Orders</a></li>
+                <li><a href="#" class="flex items-center p-3 rounded-lg hover:bg-emerald-800 transition">Nursery Health</a></li>
+                <li><a href="#" class="flex items-center p-3 rounded-lg hover:bg-emerald-800 transition">Marketing & SEO</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content" class="flex-1 p-5 md:p-10">
+            <header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h1 class="text-3xl font-serif font-bold text-emerald-950">Store Overview</h1>
+                    <p class="text-stone-600 mt-1">Welcome back! Your nursery is currently 85% stocked.</p>
+                </div>
+                <div class="flex gap-3">
+                    <button class="bg-white border border-stone-200 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-stone-100 transition shadow-sm">Export Report</button>
+                    <button class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 transition shadow-sm">Add New Plant</button>
+                </div>
+            </header>
+
+            <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-12" aria-label="Business Metrics">
+                <article class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h2 class="text-stone-500 text-sm font-bold uppercase tracking-wider">Total Sales</h2>
+                    <p class="text-3xl font-bold mt-2">$12,480</p>
+                    <span class="text-emerald-600 text-sm font-medium">↑ 12% vs last month</span>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h2 class="text-stone-500 text-sm font-bold uppercase tracking-wider">Active Orders</h2>
+                    <p class="text-3xl font-bold mt-2">42</p>
+                    <span class="text-amber-600 text-sm font-medium">8 pending shipment</span>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h2 class="text-stone-500 text-sm font-bold uppercase tracking-wider">Store Visits</h2>
+                    <p class="text-3xl font-bold mt-2">2,840</p>
+                    <span class="text-emerald-600 text-sm font-medium">↑ 5% SEO growth</span>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h2 class="text-stone-500 text-sm font-bold uppercase tracking-wider">Customer Rating</h2>
+                    <p class="text-3xl font-bold mt-2">4.9/5</p>
+                    <div class="flex text-emerald-500 mt-1" aria-label="5 star rating">★★★★★</div>
+                </article>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden" aria-labelledby="inventory-heading">
+                <div class="p-6 border-b border-stone-100 flex justify-between items-center">
+                    <h2 id="inventory-heading" class="text-xl font-bold text-emerald-950">Top Selling Plants</h2>
+                    <a href="#" class="text-emerald-600 font-semibold text-sm hover:underline">View All Inventory</a>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-stone-50 text-stone-600 text-xs uppercase tracking-widest">
+                            <tr>
+                                <th class="px-6 py-4 font-bold">Plant Name</th>
+                                <th class="px-6 py-4 font-bold">Category</th>
+                                <th class="px-6 py-4 font-bold">Stock Status</th>
+                                <th class="px-6 py-4 font-bold">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-100">
+                            <tr class="hover:bg-stone-50 transition">
+                                <td class="px-6 py-4 font-medium flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-emerald-100 rounded-md" aria-hidden="true"></div>
+                                    Monstera Deliciosa
+                                </td>
+                                <td class="px-6 py-4 text-stone-600">Indoor / Foliage</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-bold">In Stock</span>
+                                </td>
+                                <td class="px-6 py-4 font-semibold">$45.00</td>
+                            </tr>
+                            <tr class="hover:bg-stone-50 transition">
+                                <td class="px-6 py-4 font-medium flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-emerald-100 rounded-md" aria-hidden="true"></div>
+                                    Fiddle Leaf Fig
+                                </td>
+                                <td class="px-6 py-4 text-stone-600">Indoor / Tree</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-bold">In Stock</span>
+                                </td>
+                                <td class="px-6 py-4 font-semibold">$85.00</td>
+                            </tr>
+                            <tr class="hover:bg-stone-50 transition">
+                                <td class="px-6 py-4 font-medium flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-emerald-100 rounded-md" aria-hidden="true"></div>
+                                    Snake Plant (Zeylanica)
+                                </td>
+                                <td class="px-6 py-4 text-stone-600">Low Light</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-bold">Low Stock</span>
+                                </td>
+                                <td class="px-6 py-4 font-semibold">$25.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-stone-100 border-t border-stone-200 py-8 text-center text-stone-500 px-4">
+        <p>&copy; 2026 Flora & Leaf Nursery Management System. Built for Performance & Accessibility.</p>
+    </footer>
+
+</body>
+</html>
